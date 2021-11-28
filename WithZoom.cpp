@@ -21,14 +21,14 @@ int d;
 
 bool check1(int x,int y,state start , int d){         //hospital path validity
     if(x<0||x>=n||y<0||y>=m||arr[x][y]=='#'|| arr[x][y] == 'M')return 0;
-    if(x  >=start.F + d  || x  < start.F - d || y  >= start.S + d || y  < start.S - d )return 0;
+    if(x  >start.F + d  || x  < start.F - d || y  > start.S + d || y  < start.S - d )return 0;
     return 1;
 }
 
 bool check2(int x,int y,state start , int d)
 {
     if(x<0||x>=n||y<0||y>=m||arr[x][y]=='#'|| arr[x][y] == 'H')return 0;
-    if(x  >=start.F + d  || x  < start.F - d || y  >= start.S + d || y  < start.S - d )return 0;
+    if(x  >start.F + d  || x  < start.F - d || y  > start.S + d || y  < start.S - d )return 0;
     return 1;
 }
 
